@@ -182,8 +182,7 @@ function populateTableEntry(trainee) {
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
-      <!-- <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div> -->
-      <div class="table__entry-icon-border s-rank-border ranking__number-badge">${trainee.grade}</div>
+      <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>
       ${
         top9 ? '<div class="table__entry-icon-crown"></div>' : ''
       }
@@ -258,13 +257,9 @@ function populateRankingEntry(trainee, currRank) {
     <div class="ranking__entry-view">
       <div class="ranking__entry-icon">
         <img class="ranking__entry-img" src="assets/trainees/${trainee.image}" />
-      <!--   <div class="ranking__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border" data-rankid="${currRank-1}"></div>
+        <div class="ranking__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border" data-rankid="${currRank-1}"></div>
       </div>
-      <div class="ranking__entry-icon-badge bg-${trainee.grade.toLowerCase()}">${currRank}</div> -->
-      
-        <div class="ranking__entry-icon-border s-rank-border" data-rankid="${currRank-1}"></div>
-      </div>
-      <div class="ranking__entry-icon-badge bg-s">${currRank}</div>
+      <div class="ranking__entry-icon-badge bg-${trainee.grade.toLowerCase()}">${currRank}</div>
       ${
         top9 ? '<div class="ranking__entry-icon-crown"></div>' : ''
       }
@@ -366,7 +361,7 @@ function removeRankedTrainee(trainee) {
   return false;
 }
 
-const currentURL = "https://alexabb88.github.io/Project7/";
+const currentURL = "https://skzweme.github.io/Project7/";
 // Serializes the ranking into a string and appends that to the current URL
 function generateShareLink() {
   let shareCode = ranking.map(function (trainee) {
